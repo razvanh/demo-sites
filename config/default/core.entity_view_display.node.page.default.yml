@@ -1,18 +1,20 @@
-uuid: 5254d9a7-1c80-4441-8316-bf8e5968a9ea
+uuid: 6c3924fe-6648-4da3-a67d-d93d7fede718
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_image
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.panelizer
     - node.type.page
-    - responsive_image.styles.narrow
   module:
-    - responsive_image
+    - image
+    - metatag
     - text
     - user
 _core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+  default_config_hash: Kfxnq5Imio9VFBoNa_PIkzXoTmjz_T-EY3mOrwDTddU
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -22,21 +24,33 @@ content:
     label: hidden
     type: text_default
     weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    region: content
   field_image:
-    weight: 1
+    weight: 3
     label: above
     settings:
-      responsive_image_style: narrow
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
+    type: image
     region: content
-  links:
+  field_meta_tags:
+    type: metatag_empty_formatter
+    region: content
     weight: 2
-    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  panelizer: true
+  scheduled_publication: true
