@@ -1,0 +1,3 @@
+drush:
+  aliases:
+    local: site1.demo-sites.local

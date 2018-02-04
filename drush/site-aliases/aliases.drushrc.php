@@ -374,3 +374,7 @@ if ('vagrant' != $_SERVER['USER']) {
   );
 }
 
+$aliases["site1.demo-sites.local"] = array (
+  'parent' => '@demo-sites.local',
+  'uri' => 'http://local.site1.demo-sites.com',
+);

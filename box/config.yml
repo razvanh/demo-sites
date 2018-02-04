@@ -77,5 +77,30 @@ php_xdebug_max_nesting_level: 256
 php_xdebug_remote_port: "9000"
 php_memory_limit: "512M"
 
+apache_vhosts:
+  # Drupal VM's default domain, evaluating to whatever `vagrant_hostname` is set to (drupalvm.test by default).
+  - servername: "{{ drupal_domain }}"
+    serveralias: "www.{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+  - servername: "local.site1.demo-sites.com"
+    documentroot: "{{ drupal_core_path }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+mysql_databases:
+  - name: "{{ drupal_db_name }}"
+    encoding: utf8mb4
+    collation: utf8mb4_general_ci
+  - name: "{{ drupal_db_name }}-site1"
+    encoding: utf8mb4
+    collation: utf8mb4_general_ci
+
+mysql_users:
+  - name: "{{ drupal_db_user }}"
+    host: "%"
+    password: "{{ drupal_db_password }}"
+    priv: "*.*:ALL"
+
 post_provision_scripts:
   - "../../../acquia/blt/scripts/drupal-vm/post-provision.sh"
