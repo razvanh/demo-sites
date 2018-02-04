@@ -1,0 +1,42 @@
+uuid: 5254d9a7-1c80-4441-8316-bf8e5968a9ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_image
+    - node.type.page
+    - responsive_image.styles.narrow
+  module:
+    - responsive_image
+    - text
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      responsive_image_style: narrow
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
