@@ -1,9 +1,9 @@
 project:
   machine_name: demo-sites
-  prefix: BLT
-  human_name: 'BLTed 8'
+  prefix: DEMO
+  human_name: 'Demo sites'
   profile:
-    name: lightning
+    name: standard
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
