@@ -1,0 +1,15 @@
+uuid: c70a0f13-1bcf-4298-a7d5-591e76ccfd4f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'view media'
