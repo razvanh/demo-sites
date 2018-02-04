@@ -1,3 +1,8 @@
 drush:
   aliases:
     local: site1.demo-sites.local
+cm:
+  core:
+    dirs:
+      sync:
+        path: ${cm.core.path}/site1.demo-sites.com

@@ -34,4 +34,4 @@ modules:
     uninstall: [devel, views_ui]
 multisites:
   - default
-  - site1.demo-sites
+  - site1.demo-sites.com

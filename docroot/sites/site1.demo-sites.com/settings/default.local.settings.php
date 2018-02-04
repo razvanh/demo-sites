@@ -13,7 +13,7 @@ $databases = array(
   array(
     'default' =>
     array(
-      'database' => 'drupal',
+      'database' => 'drupal-site1',
       'username' => 'drupal',
       'password' => 'drupal',
       'host' => 'localhost',

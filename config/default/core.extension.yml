@@ -32,8 +32,7 @@ module:
   responsive_image: 0
   search: 0
   seckit: 0
-  settings_tray: 0
-  shortcut: 0
+  settings_tray: null
   system: 0
   taxonomy: 0
   text: 0
