@@ -1,0 +1,22 @@
+demo_external_posts_ws_posts:
+  path: 'demos/posts'
+  defaults:
+    _controller: '\Drupal\demo_external_posts\Controller\DemoWSController::posts'
+    _title: 'Show posts from a service'
+  requirements:
+    _permission: 'access content'
+
+demo_external_posts_ws_post:
+  path: 'demos/posts/{post_id}'
+  defaults:
+    _controller: '\Drupal\demo_external_posts\Controller\DemoWSController::post'
+  requirements:
+    _permission: 'access content'
+
+demo_external_posts_config_form:
+  path: 'admin/demos/posts'
+  defaults:
+    _form:  '\Drupal\demo_external_posts\Form\WSPostConfigForm'
+    _title: 'Configurations for WS posts'
+  requirements:
+    _permission: 'administer site configuration'

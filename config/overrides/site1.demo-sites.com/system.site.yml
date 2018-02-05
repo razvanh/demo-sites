@@ -1,0 +1,14 @@
+uuid: 3c1f639b-b1da-48bf-b49f-57c592e62c48
+name: 'Demo sites - Site 1'
+mail: no-reply@acquia.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

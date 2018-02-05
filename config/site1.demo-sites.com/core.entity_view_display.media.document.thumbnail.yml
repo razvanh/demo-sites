@@ -1,4 +1,4 @@
-uuid: 101ff3d7-1607-4ecc-951e-bc7083e51201
+uuid: 22b5f723-a3f4-4324-867b-0f1a66e31737
 langcode: en
 status: true
 dependencies:
@@ -31,4 +31,5 @@ hidden:
   field_document: true
   field_media_in_library: true
   name: true
+  scheduled_publication: true
   uid: true

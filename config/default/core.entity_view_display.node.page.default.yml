@@ -6,13 +6,21 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_image
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.panelizer
+    - field.field.node.page.field_paragraphs
     - node.type.page
   module:
+    - entity_reference_revisions
     - image
     - metatag
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: Kfxnq5Imio9VFBoNa_PIkzXoTmjz_T-EY3mOrwDTddU
 id: node.page.default
@@ -23,15 +31,17 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   content_moderation_control:
-    weight: -20
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_image:
-    weight: 3
+    weight: 5
     label: above
     settings:
       image_style: ''
@@ -42,15 +52,23 @@ content:
   field_meta_tags:
     type: metatag_empty_formatter
     region: content
-    weight: 2
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 1
-    settings: {  }
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  panelizer: true
   scheduled_publication: true

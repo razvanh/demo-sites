@@ -4,6 +4,10 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_filter: 0
+  config_override: 0
+  config_split: 0
+  config_update: 0
   consumers: 0
   contact: 0
   contact_storage: 0
@@ -15,6 +19,7 @@ module:
   datetime: 0
   dblog: 0
   devel: 0
+  devel_generate: 0
   diff: 0
   dropzonejs: 0
   editor: 0
@@ -23,6 +28,9 @@ module:
   entity_browser: 0
   entity_embed: 0
   entity_reference: 0
+  entity_reference_revisions: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_ui: 0
   file: 0
@@ -82,6 +90,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  text_formats: 0
   token: 0
   toolbar: 0
   user: 0
@@ -92,6 +101,7 @@ module:
   workflows: 0
   menu_link_content: 1
   views: 10
+  paragraphs: 11
   lightning: 1000
 theme:
   stable: 0

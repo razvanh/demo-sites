@@ -1,4 +1,4 @@
-uuid: 42006307-c097-49c7-bc43-92b8e9f531fe
+uuid: f89c0053-bfe8-4889-860f-a95052cd70b9
 langcode: en
 status: true
 dependencies:
@@ -56,6 +56,12 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }

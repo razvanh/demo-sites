@@ -6,11 +6,22 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^8.3",
-        "geerlingguy/drupal-vm": "~4.3"
+        "geerlingguy/drupal-vm": "~4.3",
+        "drupal/paragraphs": "^1.2",
+        "drupal/migrate_upgrade": "^2.0",
+        "drupal/migrate_plus": "^2.0",
+        "drupal/migrate_tools": "^2.0",
+        "drupal/field_collection": "3.x-dev",
+        "drupal/config_override": "^1.0@beta"
     },
     "require-dev": {},
     "extra": {
         "enable-patching": true,
+        "patches": {
+            "drupal/field_collection": {
+                "2757989 - Migrating to a multi-value field collection in D8": "https://www.drupal.org/files/issues/2757989-migrate-multi-value-field-collection-15.patch"
+            }
+        },
         "installer-types": [
             "bower-asset",
             "npm-asset"

@@ -1,0 +1,7 @@
+name: 'Demo Migrate'
+description: 'A simple migration demo.'
+core: 8.x
+type: module
+package: Demo
+dependencies:
+  - drupal:migrate

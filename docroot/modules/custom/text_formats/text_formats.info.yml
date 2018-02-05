@@ -1,0 +1,7 @@
+name: 'Text formats'
+type: module
+core: 8.x
+dependencies:
+  - drupal:editor
+  - drupal:entity_embed
+  - drupal:filter

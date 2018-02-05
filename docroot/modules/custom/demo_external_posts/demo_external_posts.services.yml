@@ -1,0 +1,4 @@
+services:
+  demo_external_posts.ws_posts:
+    class: Drupal\demo_external_posts\WSPosts
+    arguments: ['@http_client', '@config.factory']

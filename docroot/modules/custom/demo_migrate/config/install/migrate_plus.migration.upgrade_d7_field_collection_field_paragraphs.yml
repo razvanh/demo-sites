@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_file
+id: d7_field_collection_field_paragraphs
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Field Collection to Paragraphs'
+migration_tags:
+  - Drupal 7
+source:
+  plugin: d7_field_collection_item
+  field_name: field_paragraphs
+process:
+  field_text: field_text
+  field_image:
+    plugin: sub_process
+    source: field_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  type:
+    plugin: default_value
+    default_value: image_and_text
+destination:
+  plugin: 'entity:paragraph'
