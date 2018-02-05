@@ -1,0 +1,14 @@
+uuid: 3db8883b-f8b5-420e-90ed-e6a972b2360a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.test_content_type_reviewer
+  module:
+    - user
+id: user_remove_role_action.test_content_type_reviewer
+label: 'Remove the Test content type reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: test_content_type_reviewer

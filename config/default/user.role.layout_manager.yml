@@ -18,3 +18,5 @@ permissions:
   - 'administer panelizer'
   - 'administer panelizer node landing_page defaults'
   - 'administer panelizer node page defaults'
+  - 'administer panelizer node people defaults'
+  - 'administer panelizer node test_content_type defaults'

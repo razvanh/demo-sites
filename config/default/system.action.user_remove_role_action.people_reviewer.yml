@@ -1,0 +1,14 @@
+uuid: e41ea7fc-308f-4eeb-929b-9d4c23c7c319
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.people_reviewer
+  module:
+    - user
+id: user_remove_role_action.people_reviewer
+label: 'Remove the People reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: people_reviewer

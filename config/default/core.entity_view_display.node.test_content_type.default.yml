@@ -1,0 +1,45 @@
+uuid: 350508da-66d3-4729-af70-376ef3869d98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_content_type.body
+    - field.field.node.test_content_type.field_options_email
+    - node.type.test_content_type
+  module:
+    - options
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.test_content_type.default
+targetEntityType: node
+bundle: test_content_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_options_email:
+    weight: 102
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  scheduled_publication: true

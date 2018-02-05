@@ -1,0 +1,32 @@
+uuid: cafca97e-a83f-47b5-81e1-91e035a6d9ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.relative.field_name
+    - field.field.paragraph.relative.field_relation
+    - paragraphs.paragraphs_type.relative
+  module:
+    - options
+id: paragraph.relative.default
+targetEntityType: paragraph
+bundle: relative
+mode: default
+content:
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_relation:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  scheduled_publication: true

@@ -1,0 +1,36 @@
+uuid: 13f3260c-810f-43ae-8ee7-d15a3816eaa8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_relation
+field_name: field_relation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Mother
+      label: Mother
+    -
+      value: Father
+      label: Father
+    -
+      value: Sister
+      label: Sister
+    -
+      value: Brother
+      label: Brother
+    -
+      value: Cousing
+      label: Cousing
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

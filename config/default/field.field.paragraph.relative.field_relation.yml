@@ -1,0 +1,21 @@
+uuid: 27b08fdb-f21d-4180-8844-9d736d53559c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_relation
+    - paragraphs.paragraphs_type.relative
+  module:
+    - options
+id: paragraph.relative.field_relation
+field_name: field_relation
+entity_type: paragraph
+bundle: relative
+label: Relation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
