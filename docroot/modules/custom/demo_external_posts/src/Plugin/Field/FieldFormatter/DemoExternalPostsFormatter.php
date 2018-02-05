@@ -5,6 +5,9 @@ namespace Drupal\demo_external_posts\Plugin\Field\FieldFormatter;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\demo_external_posts\WSPosts;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Plugin implementation of the 'webform_workflow_formatter' formatter.
@@ -17,17 +20,32 @@ use Drupal\Core\Field\FieldItemListInterface;
  *   }
  * )
  */
-class DemoExternalPostsFormatter extends FormatterBase {
+class DemoExternalPostsFormatter extends FormatterBase implements ContainerFactoryPluginInterface{
 
 
   protected $wsPosts;
 
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['label'],
+      $configuration['view_mode'],
+      $configuration['third_party_settings'],
+      // External posts service
+      $container->get('demo_external_posts.ws_posts')
+    );
+  }
+
   /**
    * {@inheritdoc}
    */
-  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings) {
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, WSPosts $wsPosts) {
     parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
-    $this->wsPosts = \Drupal::service('demo_external_posts.ws_posts');
+
+    $this->wsPosts = $wsPosts;
   }
 
   /**
