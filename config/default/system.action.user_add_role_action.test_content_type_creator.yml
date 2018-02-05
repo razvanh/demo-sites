@@ -1,0 +1,14 @@
+uuid: 31f31033-4cd2-44a2-9def-9f5bb902aa26
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.test_content_type_creator
+  module:
+    - user
+id: user_add_role_action.test_content_type_creator
+label: 'Add the Test content type creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: test_content_type_creator

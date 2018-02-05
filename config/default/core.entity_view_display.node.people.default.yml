@@ -1,0 +1,29 @@
+uuid: 9c30c487-ed2a-4138-b27e-7be6bc72657d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.people.field_relative
+    - node.type.people
+  module:
+    - entity_reference_revisions
+    - user
+id: node.people.default
+targetEntityType: node
+bundle: people
+mode: default
+content:
+  field_relative:
+    type: entity_reference_revisions_entity_view
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  scheduled_publication: true

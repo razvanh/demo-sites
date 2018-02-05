@@ -1,0 +1,14 @@
+uuid: 8f31e009-40dd-4c86-809b-2700ab707fa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.people_reviewer
+  module:
+    - user
+id: user_add_role_action.people_reviewer
+label: 'Add the People reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: people_reviewer

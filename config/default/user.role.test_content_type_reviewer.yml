@@ -1,0 +1,15 @@
+uuid: b23a7b14-7497-444c-8334-2e14747a550a
+langcode: en
+status: true
+dependencies: {  }
+id: test_content_type_reviewer
+label: 'Test content type reviewer'
+weight: 8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any test_content_type content'
+  - 'edit any test_content_type content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'

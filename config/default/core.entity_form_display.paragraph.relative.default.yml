@@ -1,0 +1,46 @@
+uuid: 03e95471-78db-42ed-b44b-6bd16063b229
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.relative.field_name
+    - field.field.paragraph.relative.field_relation
+    - paragraphs.paragraphs_type.relative
+  module:
+    - content_moderation
+    - datetime
+id: paragraph.relative.default
+targetEntityType: paragraph
+bundle: relative
+mode: default
+content:
+  field_name:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_relation:
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
