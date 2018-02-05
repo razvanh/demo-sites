@@ -20,11 +20,14 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   }
  * )
  */
-class DemoExternalPostsFormatter extends FormatterBase implements ContainerFactoryPluginInterface{
+class DemoExternalPostsFormatter extends FormatterBase implements ContainerFactoryPluginInterface {
 
 
   protected $wsPosts;
 
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $plugin_id,
@@ -34,7 +37,7 @@ class DemoExternalPostsFormatter extends FormatterBase implements ContainerFacto
       $configuration['label'],
       $configuration['view_mode'],
       $configuration['third_party_settings'],
-      // External posts service
+      // External posts service.
       $container->get('demo_external_posts.ws_posts')
     );
   }
