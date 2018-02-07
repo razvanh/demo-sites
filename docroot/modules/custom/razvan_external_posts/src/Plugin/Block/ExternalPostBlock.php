@@ -6,6 +6,7 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\razvan_external_posts\RHPosts;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Class ExternalPostBlock.
@@ -36,11 +37,31 @@ class ExternalPostBlock extends BlockBase implements ContainerFactoryPluginInter
     parent::__construct($configuration, $plugin_id, $plugin_definition);
   }
 
-  /**
-   *
-   */
+
+  public function defaultConfiguration() {
+    return [
+      'post_id' => 2,
+    ];
+  }
+
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form['block_example_string_text'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Post ID'),
+      '#description' => $this->t('Which post do you want to see'),
+      '#default_value' => $this->configuration['post_id'],
+    ];
+    return $form;
+  }
+
+  public function blockSubmit($form, FormStateInterface $form_state) {
+    $this->configuration['post_id']
+      = $form_state->getValue('block_example_string_text');
+  }
+
+
   public function build() {
-    return $this->rhPosts->renderPost(2);
+    return $this->rhPosts->renderPost($this->configuration['post_id']);
   }
 
 }
