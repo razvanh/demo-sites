@@ -1,0 +1,6 @@
+razvan_external_posts_posts:
+  title: 'Razvan External Posts'
+  description: 'External posts config page'
+  parent: system.admin_content
+  route_name: razvan_external_posts_config_form
+  weight: 100

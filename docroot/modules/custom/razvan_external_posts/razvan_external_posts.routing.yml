@@ -1,0 +1,22 @@
+razvan_external_posts_posts:
+  path: 'razvan_external_posts/posts'
+  defaults:
+    _controller: '\Drupal\razvan_external_posts\Controller\RazvanExternalPostsController::posts'
+    _title: 'External Posts'
+  requirements:
+    _permission: 'view raz external posts'
+
+razvan_external_posts_post_detail:
+  path: 'razvan_external_posts/post/{post_id}'
+  defaults:
+    _controller: '\Drupal\razvan_external_posts\Controller\RazvanExternalPostsController::post'
+  requirements:
+    _permission: 'view raz external posts'
+
+razvan_external_posts_config_form:
+  path: 'admin/razvan_external_posts'
+  defaults:
+    _form:  '\Drupal\razvan_external_posts\Form\RHPostConfigForm'
+    _title: 'Configurations for Razvan External Posts'
+  requirements:
+    _permission: 'administer site configuration'

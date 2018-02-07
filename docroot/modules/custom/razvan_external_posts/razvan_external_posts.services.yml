@@ -1,0 +1,4 @@
+services:
+  razvan_external_posts.rh_posts:
+    class: Drupal\razvan_external_posts\RHPosts
+    arguments:  ['@http_client','@config.factory']
