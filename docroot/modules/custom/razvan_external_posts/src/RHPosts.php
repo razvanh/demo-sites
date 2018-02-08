@@ -49,6 +49,12 @@ class RHPosts {
 
     $elements['#title'] = $post->title;
 
+    $elements['title'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'h1',
+      '#value' => $post->title,
+    ];
+
     $elements['body'] = [
       '#type' => 'html_tag',
       '#tag' => 'div',
